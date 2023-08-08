@@ -108,7 +108,7 @@ export ROS_WORKSPACE=${HOME}/ros2_ws
 function ros_make() {
     dir=$PWD;
     cd $ROS_WORKSPACE;
-    colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release;
+    colcon build --symlink-install;
     . install/local_setup.bash;
     cd $dir;
 }
