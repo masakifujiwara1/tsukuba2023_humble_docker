@@ -9,7 +9,7 @@ ENV TZ Asia/Tokyo
 # install vim
 RUN apt-get update -qq
 RUN apt-get install -y tzdata
-RUN apt-get update && apt-get install -y vim git lsb-release sudo gnupg
+RUN apt-get update && apt-get install -y vim git lsb-release sudo gnupg htop gedit tmux
 
 # install python3
 RUN apt-get install -y python3 python3-pip
