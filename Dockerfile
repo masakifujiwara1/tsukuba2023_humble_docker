@@ -29,3 +29,6 @@ RUN mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src && git clone https://github.com/m
 RUN . /opt/ros/humble/setup.sh; cd ~/ros2_ws && colcon build --symlink-install
 # RUN colcon build --symlink-install
 RUN source /opt/ros/humble/setup.bash && source ~/ros2_ws/install/local_setup.bash
+
+COPY config/.bashrc ~/.bashrc
+COPY config/.vimrc ~/.vimrc
