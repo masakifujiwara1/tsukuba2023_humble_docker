@@ -3,6 +3,8 @@ FROM dustynv/ros:humble-desktop-l4t-r35.4.1
 WORKDIR /home
 ENV HOME /home
 
+ARG UID=1000
+
 # install
 RUN apt-get update && apt-get install -y vim git lsb-release sudo gnupg htop gedit tmux
 
