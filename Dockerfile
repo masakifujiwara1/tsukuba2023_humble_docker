@@ -3,7 +3,12 @@ FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
 WORKDIR /home
 ENV HOME /home
 
+ENV DEBIAN_FRONTEND noninteractive
+ENV TZ Asia/Tokyo
+
 # install vim
+RUN apt-get update -qq
+RUN apt-get install -y tzdata
 RUN apt-get update && apt-get install -y vim git lsb-release sudo gnupg
 
 # install python3
